@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aceda5a1-825c-41bd-a00b-905564392ba1" name="Default Changelist" comment="" />
+    <list default="true" id="aceda5a1-825c-41bd-a00b-905564392ba1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bee_algo.go" beforeDir="false" afterPath="$PROJECT_DIR$/bee_algo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph.go" beforeDir="false" afterPath="$PROJECT_DIR$/graph.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +20,9 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.15.2/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1iKbolhpaOtDHRXhqPOjVK9453Q" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="go build github.com/arideno/BeeAlgorithm" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -48,56 +56,53 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="246" key="GridCell.Tab.0.bottom" timestamp="1601757094291">
-      <screen x="0" y="25" width="1440" height="779" />
+    <state width="1878" height="324" key="GridCell.Tab.0.bottom" timestamp="1602069533946">
+      <screen x="0" y="23" width="1920" height="974" />
     </state>
+    <state width="1878" height="324" key="GridCell.Tab.0.bottom/0.23.1920.974@0.23.1920.974" timestamp="1602069533946" />
     <state width="1398" height="246" key="GridCell.Tab.0.bottom/0.25.1440.779@0.25.1440.779" timestamp="1601757094291" />
     <state width="1398" height="248" key="GridCell.Tab.0.bottom/0.25.1440.783@0.25.1440.783" timestamp="1601721593676" />
-    <state width="1398" height="246" key="GridCell.Tab.0.center" timestamp="1601757094291">
-      <screen x="0" y="25" width="1440" height="779" />
+    <state width="1878" height="324" key="GridCell.Tab.0.center" timestamp="1602069533946">
+      <screen x="0" y="23" width="1920" height="974" />
     </state>
+    <state width="1878" height="324" key="GridCell.Tab.0.center/0.23.1920.974@0.23.1920.974" timestamp="1602069533946" />
     <state width="1398" height="246" key="GridCell.Tab.0.center/0.25.1440.779@0.25.1440.779" timestamp="1601757094291" />
     <state width="1398" height="248" key="GridCell.Tab.0.center/0.25.1440.783@0.25.1440.783" timestamp="1601721593674" />
-    <state width="1398" height="246" key="GridCell.Tab.0.left" timestamp="1601757094290">
-      <screen x="0" y="25" width="1440" height="779" />
+    <state width="1878" height="324" key="GridCell.Tab.0.left" timestamp="1602069533945">
+      <screen x="0" y="23" width="1920" height="974" />
     </state>
+    <state width="1878" height="324" key="GridCell.Tab.0.left/0.23.1920.974@0.23.1920.974" timestamp="1602069533945" />
     <state width="1398" height="246" key="GridCell.Tab.0.left/0.25.1440.779@0.25.1440.779" timestamp="1601757094290" />
     <state width="1398" height="248" key="GridCell.Tab.0.left/0.25.1440.783@0.25.1440.783" timestamp="1601721593674" />
-    <state width="1398" height="246" key="GridCell.Tab.0.right" timestamp="1601757094291">
-      <screen x="0" y="25" width="1440" height="779" />
+    <state width="1878" height="324" key="GridCell.Tab.0.right" timestamp="1602069533946">
+      <screen x="0" y="23" width="1920" height="974" />
     </state>
+    <state width="1878" height="324" key="GridCell.Tab.0.right/0.23.1920.974@0.23.1920.974" timestamp="1602069533946" />
     <state width="1398" height="246" key="GridCell.Tab.0.right/0.25.1440.779@0.25.1440.779" timestamp="1601757094291" />
     <state width="1398" height="248" key="GridCell.Tab.0.right/0.25.1440.783@0.25.1440.783" timestamp="1601721593675" />
-    <state width="1398" height="246" key="GridCell.Tab.1.bottom" timestamp="1601757094293">
-      <screen x="0" y="25" width="1440" height="779" />
+    <state width="1878" height="324" key="GridCell.Tab.1.bottom" timestamp="1602069533948">
+      <screen x="0" y="23" width="1920" height="974" />
     </state>
+    <state width="1878" height="324" key="GridCell.Tab.1.bottom/0.23.1920.974@0.23.1920.974" timestamp="1602069533948" />
     <state width="1398" height="246" key="GridCell.Tab.1.bottom/0.25.1440.779@0.25.1440.779" timestamp="1601757094293" />
     <state width="1398" height="246" key="GridCell.Tab.1.bottom/0.25.1440.783@0.25.1440.783" timestamp="1601711848697" />
-    <state width="1398" height="246" key="GridCell.Tab.1.center" timestamp="1601757094292">
-      <screen x="0" y="25" width="1440" height="779" />
+    <state width="1878" height="324" key="GridCell.Tab.1.center" timestamp="1602069533947">
+      <screen x="0" y="23" width="1920" height="974" />
     </state>
+    <state width="1878" height="324" key="GridCell.Tab.1.center/0.23.1920.974@0.23.1920.974" timestamp="1602069533947" />
     <state width="1398" height="246" key="GridCell.Tab.1.center/0.25.1440.779@0.25.1440.779" timestamp="1601757094292" />
     <state width="1398" height="246" key="GridCell.Tab.1.center/0.25.1440.783@0.25.1440.783" timestamp="1601711848696" />
-    <state width="1398" height="246" key="GridCell.Tab.1.left" timestamp="1601757094292">
-      <screen x="0" y="25" width="1440" height="779" />
+    <state width="1878" height="324" key="GridCell.Tab.1.left" timestamp="1602069533947">
+      <screen x="0" y="23" width="1920" height="974" />
     </state>
+    <state width="1878" height="324" key="GridCell.Tab.1.left/0.23.1920.974@0.23.1920.974" timestamp="1602069533947" />
     <state width="1398" height="246" key="GridCell.Tab.1.left/0.25.1440.779@0.25.1440.779" timestamp="1601757094292" />
     <state width="1398" height="246" key="GridCell.Tab.1.left/0.25.1440.783@0.25.1440.783" timestamp="1601711848696" />
-    <state width="1398" height="246" key="GridCell.Tab.1.right" timestamp="1601757094292">
-      <screen x="0" y="25" width="1440" height="779" />
+    <state width="1878" height="324" key="GridCell.Tab.1.right" timestamp="1602069533947">
+      <screen x="0" y="23" width="1920" height="974" />
     </state>
+    <state width="1878" height="324" key="GridCell.Tab.1.right/0.23.1920.974@0.23.1920.974" timestamp="1602069533947" />
     <state width="1398" height="246" key="GridCell.Tab.1.right/0.25.1440.779@0.25.1440.779" timestamp="1601757094292" />
     <state width="1398" height="246" key="GridCell.Tab.1.right/0.25.1440.783@0.25.1440.783" timestamp="1601711848697" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/bee_algo.go</url>
-          <line>18</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

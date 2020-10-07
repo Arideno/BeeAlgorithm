@@ -33,6 +33,16 @@ func (g *Graph) printDegrees() {
 	}
 }
 
+func (g *Graph) getUnused(used []bool) []int {
+	var a []int
+	for i, v := range used {
+		if !v {
+			a = append(a, i)
+		}
+	}
+	return a
+}
+
 func (g *Graph) getConnectedVertexes(vertex int) []int {
 	var vertexes []int
 	for i, v := range g.adjMatrix[vertex] {

@@ -17,42 +17,43 @@ type BeeAlgorithm struct {
 func (b *BeeAlgorithm) Start() {
 	b.generateSections()
 	for iteration := 0; iteration < 1000; iteration++ {
+		if iteration % 20 == 0 {
+			for _, section := range b.sections {
+				if section != nil {
+					fmt.Printf("%d ", section.colorsUsed)
+				}
+			}
+			fmt.Println()
+		}
 		sections := b.getRandomSections()
 		for _, section := range sections {
 			workBees := b.workBees / section.colorsUsed
-			usedVertexes := make(map[int]bool)
+			usedVertexes := make([]bool, b.graph.numVertexes)
 			for workBees > 0 {
-				maxDegree := 0
-				maxVertex := -1
-				for i := 0; i < b.graph.numVertexes; i++ {
-					sum := 0
-					for j := 0; j < b.graph.numVertexes; j++ {
-						sum += b.graph.adjMatrix[i][j]
-					}
-					if sum > maxDegree {
-						if _, ok := usedVertexes[i]; !ok {
-							maxDegree = sum
-							maxVertex = i
-						}
-					}
-				}
-				if maxVertex == -1 {
+				unused := b.graph.getUnused(usedVertexes)
+				if len(unused) == 0 {
 					break
 				}
+				maxVertex := unused[rand.Intn(len(unused))]
 				usedVertexes[maxVertex] = true
 				for _, connectedVertex := range b.graph.getConnectedVertexes(maxVertex) {
 					if workBees <= 0 {
 						break
 					}
-					workBees--
-					currentColor := section.coloring[connectedVertex]
-					for i := 1; i < currentColor; i++ {
-						section.coloring[connectedVertex] = i
-						if !section.isValidColoring() {
-							section.coloring[connectedVertex] = currentColor
-						} else {
-							break
+					section.coloring[maxVertex], section.coloring[connectedVertex] = section.coloring[connectedVertex], section.coloring[maxVertex]
+					if section.isValidColoring() {
+						currentColor := section.coloring[connectedVertex]
+						for i := 1; i < currentColor; i++ {
+							section.coloring[connectedVertex] = i
+							if !section.isValidColoring() {
+								section.coloring[connectedVertex] = currentColor
+							} else {
+								workBees--
+								break
+							}
 						}
+					} else {
+						section.coloring[maxVertex], section.coloring[connectedVertex] = section.coloring[connectedVertex], section.coloring[maxVertex]
 					}
 				}
 			}
@@ -90,7 +91,7 @@ func dfs(v, color int, visited []bool, section *Section) {
 	section.coloring[v] = color
 	for _, i := range section.graph.getConnectedVertexes(v) {
 		if !visited[i] {
-			for j := 1; ; j++ {
+			for j := 10; ; j++ {
 				section.coloring[i] = j
 				if section.isValidColoring() {
 					dfs(i, j, visited, section)
