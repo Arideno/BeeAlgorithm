@@ -18,16 +18,21 @@ func (b *BeeAlgorithm) Start() {
 	b.generateSections()
 	for iteration := 0; iteration < 1000; iteration++ {
 		if iteration % 20 == 0 {
+			min := math.MaxInt32
 			for _, section := range b.sections {
 				if section != nil {
-					fmt.Printf("%d ", section.colorsUsed)
+					min = int(math.Min(float64(min), float64(section.colorsUsed)))
 				}
 			}
-			fmt.Println()
+			fmt.Printf("Iteration %d: %d\n", iteration, min)
 		}
 		sections := b.getRandomSections()
+		sumOfColorsUsed := 0.0
 		for _, section := range sections {
-			workBees := b.workBees / section.colorsUsed
+			sumOfColorsUsed += float64(section.colorsUsed)
+		}
+		for _, section := range sections {
+			workBees := int(float64(b.workBees) * (1 - float64(section.colorsUsed) / sumOfColorsUsed))
 			usedVertexes := make([]bool, b.graph.numVertexes)
 			for workBees > 0 {
 				unused := b.graph.getUnused(usedVertexes)
@@ -42,13 +47,13 @@ func (b *BeeAlgorithm) Start() {
 					}
 					section.coloring[maxVertex], section.coloring[connectedVertex] = section.coloring[connectedVertex], section.coloring[maxVertex]
 					if section.isValidColoring() {
+						workBees--
 						currentColor := section.coloring[connectedVertex]
 						for i := 1; i < currentColor; i++ {
 							section.coloring[connectedVertex] = i
 							if !section.isValidColoring() {
 								section.coloring[connectedVertex] = currentColor
 							} else {
-								workBees--
 								break
 							}
 						}
@@ -60,11 +65,13 @@ func (b *BeeAlgorithm) Start() {
 			section.colorsUsed = section.getNumberOfColorsUsed()
 		}
 	}
-	for _, v := range b.sections {
-		if v != nil {
-			fmt.Printf("%d ", v.colorsUsed)
+	min := math.MaxInt32
+	for _, section := range b.sections {
+		if section != nil {
+			min = int(math.Min(float64(min), float64(section.colorsUsed)))
 		}
 	}
+	fmt.Printf("Iteration %d: %d\n", 1000, min)
 }
 
 func (b *BeeAlgorithm) getRandomSections() []*Section {
